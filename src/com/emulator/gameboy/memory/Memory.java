@@ -55,12 +55,10 @@ public final class Memory {
   }
 
   public void setByte(int address, byte value) {
-    //memory.put(address & 0xFFFF, value);
     memory.put(address, value);
   }
 
   public void setWord(int address, short value) {
-    //memory.putShort(address & 0xFFFF, value);
     memory.putShort(address, value);
   }
 
