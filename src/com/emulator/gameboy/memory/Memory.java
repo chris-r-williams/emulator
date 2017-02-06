@@ -46,18 +46,41 @@ public final class Memory {
     return false;
   }
 
+  /**
+   * Get the byte at a location in memory.
+   * 
+   * @param address the memory address
+   * @return the byte
+   */
   public byte getByteAt(int address) {
     return memory.get(address);
   }
 
+  /**
+   * Get the word at a location in memory.
+   * 
+   * @param address the memory address
+   * @return the word
+   */
   public short getWordAt(int address) {
     return memory.getShort(address);
   }
 
+  /**
+   * Set a byte at a location in memory.
+   * 
+   * @param address the memory address
+   * @param value the byte value
+   */
   public void setByte(int address, byte value) {
     memory.put(address, value);
   }
 
+  /**
+   * Set a word at a location in memory.
+   * @param address the memory address
+   * @param value the word value
+   */
   public void setWord(int address, short value) {
     memory.putShort(address, value);
   }
