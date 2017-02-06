@@ -7,3 +7,5 @@ It conforms to the [Google Java Style Guide](https://google.github.io/styleguide
 FindBugs is used for static analysis.
 
 A testing framework has been created using JUnit, with complete code coverage as a goal.
+
+This project is licensed under the terms of the MIT license.
