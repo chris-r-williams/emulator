@@ -98,6 +98,11 @@ public final class Cpu implements AbstractCpu {
     }
   }
   
+  /**
+   * Fetches the next instruction using the program counter.
+   * 
+   * @return the next instruction
+   */
   public byte fetch() {
     return memory.getByteAt(programCounter);
   }
