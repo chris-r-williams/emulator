@@ -145,6 +145,11 @@ public final class Gui implements ActionListener {
     frame.pack();
   }
 
+  /**
+   * Accessor method for the screen created on the content pane.
+   * 
+   * @return the screen
+   */
   public Screen getScreen() {
     return screen;
   }
