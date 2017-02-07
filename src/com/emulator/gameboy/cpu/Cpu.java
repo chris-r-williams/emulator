@@ -115,6 +115,9 @@ public final class Cpu implements AbstractCpu {
    */
   public void decodeAndExecute(byte opcode) throws UnsupportedOperationException {
     System.out.println(String.format("Decode: 0x%02X", unsignedValue(opcode)));
+    
+    // a giant switch statement is unfortunately probably the best way to evaluate the huge list of
+    // opcodes
     switch (unsignedValue(opcode)) {
       case 0x00:
         // NOP
@@ -191,6 +194,7 @@ public final class Cpu implements AbstractCpu {
     }
   }
 
+  // CB-prefixed instructions are evaluated in a separate switch statement
   private void decodeAndExecuteCb(byte opcode) {
     switch (unsignedValue(opcode)) {
       case 0x11:
@@ -453,6 +457,11 @@ public final class Cpu implements AbstractCpu {
     programCounter++;
   }
 
+  /**
+   * The cycle time taken by the most recent instruction.
+   * 
+   * @return the instruction time
+   */
   public int getLastInstructionTime() {
     return lastInstructionTime;
   }
